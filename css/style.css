@@ -145,7 +145,7 @@ nav a:hover,
 main {
     position: relative;
     height: 100vh;
-    background-image: url('../assets/img/fondoInicio.jpg'); /* Replace with your image */
+    background-image: url('../assets/img/fondoInicio.jpeg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -501,6 +501,99 @@ nav ul li {
 
 
 
+
+/* Estilos generales del footer */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .social-links {
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    margin: 0 15px;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #1da1f2;
+  }
+  
+  .social-icon.facebook:hover {
+    color: #3b5998;
+  }
+  
+  .social-icon.twitter:hover {
+    color: #1da1f2;
+  }
+  
+  .social-icon.instagram:hover {
+    color: #e4405f;
+  }
+  
+  .social-icon.whatsapp:hover {
+    color: #3ef183;
+  }
+  
+  /* Estilo para el mensaje de "Creado por Digital Nest" */
+  .footer-creator {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-size: 12px;
+  }
+  
+  .footer-creator p {
+    margin: 0;
+  }
+  
+  .footer-creator a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .footer-creator a:hover {
+    color: #1da1f2; /* O cualquier color de tu preferencia */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Media query para pantallas de 844px o menos */
 @media (max-width: 844px) {
     .bars {
@@ -527,6 +620,7 @@ nav ul li {
     nav ul li {
         margin: 10px 0;
         text-align: center;
+
     }
 }
 
