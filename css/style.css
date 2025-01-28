@@ -145,7 +145,7 @@ nav a:hover,
 main {
     position: relative;
     height: 100vh;
-    background-image: url('../assets/img/fondoInicio.jpeg'); /* Replace with your image */
+    background-image: url('../assets/img/fotoInicio.png'); /* Replace with your image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
