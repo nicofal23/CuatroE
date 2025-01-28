@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuatroE</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <div class="bars">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="titulo">
+                <li><a href="index.html">CuatroE</a></li>
+            </ul>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="./pages/quienessomos.html">QUIÉNES SOMOS</a></li>
+                <li><a href="#artistas">ARTISTAS</a></li>
+                <li><a href="#audiovisual">AUDIOVISUAL</a></li>
+                <li><a href="#produccion">PRODUCCIÓN</a></li>
+                <li>
+                    <div class="music-container" onclick="toggleMusic()">
+                        <div class="circle">
+                            <div class="bars">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide active">
+                    <img src="./assets/img/victoria.jpeg" alt="Imagen 1">
+                    <div class="slide-text">
+                        <h2>Explora lo mejor</h2>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./assets/img/uno.jpeg" alt="Imagen 2">
+                    <div class="slide-text">
+                        <h2>Vive la experiencia</h2>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="./assets/img/dos.jpeg" alt="Imagen 3">
+                    <div class="slide-text">
+                        <h2>Un mundo diferente</h2>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div class="carousel-buttons">
+            <button id="prevButton">◀</button>
+            <button id="nextButton">▶</button>
+        </div>
+    </main>
+
+    <audio id="audio" src="./assets/music/victoria.mp3"></audio>
+    <script src="./js/script.js"></script>
+</body>
+</html>
