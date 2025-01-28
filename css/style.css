@@ -661,9 +661,7 @@ footer {
         width: 80%;
         height: 60%;
       }
-      main {
-        align-items: flex-end;
-      }
+      
       .slide-text {
         align-items: center;
       }
