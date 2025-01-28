@@ -500,12 +500,6 @@ nav ul li {
 
 
 
-.bars div {
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    transition: all 0.3s;
-}
 
 /* Media query para pantallas de 844px o menos */
 @media (max-width: 844px) {
