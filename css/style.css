@@ -665,6 +665,9 @@ footer {
       .slide-text {
         align-items: center;
       }
+      .carousel{
+        margin-left: 10%;
+      }
 }
 
 
