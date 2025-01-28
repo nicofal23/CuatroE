@@ -58,12 +58,35 @@ slides[currentIndex].classList.add('active');
 
 
 //menu js index 
-
-// Seleccionamos el botón de hamburguesa y el menú
+// Seleccionamos el botón de hamburguesa, el menú, los enlaces dentro del menú y el botón de música
 const bars = document.querySelector('.bars');
 const navMenu = document.querySelector('nav ul');
+const menuLinks = document.querySelectorAll('nav ul li a');
+const musicButton = document.querySelector('.music-container');
 
-// Alternar la clase 'active' para mostrar u ocultar el menú
-bars.addEventListener('click', () => {
+// Alternar la clase 'active' para mostrar u ocultar el menú al hacer clic en el botón
+bars.addEventListener('click', (e) => {
+    e.stopPropagation(); // Evita que el clic se propague al documento
     navMenu.classList.toggle('active');
 });
+
+// Cerrar el menú cuando se hace clic en un enlace
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
+
+// Cerrar el menú cuando se hace clic en el botón de música
+musicButton.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+});
+
+// Cerrar el menú si se hace clic fuera de él
+document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !bars.contains(e.target)) {
+        navMenu.classList.remove('active');
+    }
+});
+
+
