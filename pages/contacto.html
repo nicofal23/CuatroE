@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuatroE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/stylequines.css">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <div class="bars">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="titulo">
+                <li><a href="index.html">CuatroE</a></li>
+            </ul>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">INICIO</a></li>
+                <li><a href="./pages/quienessomos.html">QUIÉNES SOMOS</a></li>
+                <li><a href="./pages/artista.html">ARTISTAS</a></li>
+                <li><a href="#audiovisual">AUDIOVISUAL Y PRODUCCIÓN</a></li>
+                <li><a href="#produccion">CONTACTO</a></li>
+                <li>
+                    <div class="music-container" onclick="toggleMusic()">
+                        <div class="circle">
+                            <div class="bars">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="container">
+            <h2>Contacto</h2>
+            <form action="mailto:tu_correo@example.com" method="post" enctype="text/plain">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required>
+          
+              <label for="email">Correo Electrónico:</label>
+              <input type="email" id="email" name="email" required>
+          
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+          <p>&copy; 2025 CuatroE - Todos los derechos reservados.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/element.producciones?igsh=NHowdGhpbWY1ZTFi" target="_blank" class="social-icon instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/3413131016" target="_blank" class="social-icon whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-creator">
+          <p>Creado por <a href="https://www.digitalnest.com.ar" target="_blank">Digital Nest</a></p>
+        </div>
+      </footer>
+      
+
+    <audio id="audio" src="../assets/music/victoria.mp3"></audio>
+    <script src="../js/script.js"></script>
+</body>
+</html>
