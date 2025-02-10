@@ -34,7 +34,6 @@ button, nav ul li a {
     letter-spacing: 1px;
 }
 
-
 /* Header */
 header {
     display: flex;
@@ -172,56 +171,50 @@ nav a:hover,
 
 /* Main Section */
 main {
-
     width: 100%;
-   
     display: flex;
     align-items: center;
     flex-direction: column;
-   
 }
+
 .contenedorsection1 {
     margin-top: 110px;
     margin-bottom: 20px;
 }
 
-
-
-.accordion{
+.accordion {
     width: 100%;
     margin: 10px;
 }
 
 /* Contenedor del video de fondo */
 .video-background {
-    position: fixed; /* Asegura que el video ocupe todo el fondo */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1; /* Pone el video detrás del contenido */
-  }
-  
-  /* Estilo para el video */
-  .video-background video {
+    z-index: -1;
+}
+
+.video-background video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que el video cubra todo el área */
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-  }
-  
-  /* Estilo para el contenido sobre el video */
-  .content {
+}
+
+/* Estilo para el contenido sobre el video */
+.content {
     position: relative;
     z-index: 1;
     text-align: center;
     color: white;
     padding: 20px;
-  }
-  
+}
 
 /* Carousel */
 .carousel {
@@ -326,28 +319,27 @@ main {
     display: flex;
     justify-content: center;
 }
+
 button {
     background-color: #000000;
 }
 
-.container2{
+.container2 {
     color: white;
     margin: 15px;
 }
 
-
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        transform: translateY(50px); /* Imagen comienza desde abajo */
+        transform: translateY(50px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* Imagen termina en su posición original */
+        transform: translateY(0);
     }
 }
 
-/* Efecto de salida de la imagen */
 @keyframes fadeOutDown {
     0% {
         opacity: 1;
@@ -355,14 +347,13 @@ button {
     }
     100% {
         opacity: 0;
-        transform: translateY(-50px); /* Imagen se desplaza hacia arriba */
+        transform: translateY(-50px);
     }
 }
 
-/* Animación de texto */
 @keyframes text-in {
     0% {
-        transform: translateX(-100%); /* El texto entra desde la izquierda */
+        transform: translateX(-100%);
         opacity: 0;
     }
     100% {
@@ -379,7 +370,7 @@ button {
     padding: 20px;
     transform: translateX(-100%);
     opacity: 0;
-    animation: text-in 1s forwards 0.5s; /* Texto entra después de un pequeño retraso */
+    animation: text-in 1s forwards 0.5s;
     display: flex;
     width: 100%;
     height: 100%;
@@ -392,14 +383,11 @@ button {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Efecto de agrandamiento al pasar el mouse */
 .carousel-slide img:hover {
-    transform: scale(1.1); /* Aumenta el tamaño de la imagen */
-    transition: transform 0.3s ease-in-out; /* Transición suave */
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-
-/* Animación para las imágenes */
 @keyframes slideDown {
     0% {
         transform: translateY(-100%);
@@ -422,9 +410,6 @@ button {
     }
 }
 
-
-
-
 /* Estilos generales para el menú */
 header {
     display: flex;
@@ -444,10 +429,6 @@ nav ul li {
     margin: 0 10px;
 }
 
-
-
-
-
 /* Estilos generales del footer */
 footer {
     background-color: #00000050;
@@ -455,102 +436,83 @@ footer {
     padding: 20px 0;
     text-align: center;
     position: relative;
-  }
-  
-  .footer-container {
+}
+
+.footer-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-  }
-  
-  footer p {
+}
+
+footer p {
     margin-bottom: 10px;
     font-size: 14px;
-  }
-  
-  .social-links {
+}
+
+.social-links {
     margin: 10px;
-  }
-  
-  .social-icon {
+}
+
+.social-icon {
     font-size: 24px;
     margin: 0 15px;
     color: white;
     transition: color 0.3s;
-  }
-  
-  .social-icon:hover {
+}
+
+.social-icon:hover {
     color: #1da1f2;
-  }
-  
-  .social-icon.facebook:hover {
+}
+
+.social-icon.facebook:hover {
     color: #3b5998;
-  }
-  
-  .social-icon.twitter:hover {
+}
+
+.social-icon.twitter:hover {
     color: #1da1f2;
-  }
-  
-  .social-icon.instagram:hover {
+}
+
+.social-icon.instagram:hover {
     color: #e4405f;
-  }
-  
-  .social-icon.whatsapp:hover {
+}
+
+.social-icon.whatsapp:hover {
     color: #3ef183;
-  }
-  
-  /* Estilo para el mensaje de "Creado por Digital Nest" */
-  .footer-creator {
+}
+
+.footer-creator {
     position: absolute;
     bottom: 10px;
     left: 20px;
     font-size: 12px;
-  }
-  
-  .footer-creator p {
+}
+
+.footer-creator p {
     margin: 0;
-  }
-  
-  .footer-creator a {
+}
+
+.footer-creator a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-  }
-  
-  .footer-creator a:hover {
-    color: #1da1f2; /* O cualquier color de tu preferencia */
-  }
-  
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer-creator a:hover {
+    color: #1da1f2;
+}
 
 /* Media query para pantallas de 844px o menos */
 @media (max-width: 844px) {
     .contenedorsection1 {
         width: 80%;
     }
+
     .bars {
-        display: flex; /* Mostramos el ícono de hamburguesa */
+        display: flex;
     }
 
     nav ul {
-        display: none; /* Escondemos el menú principal */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -563,59 +525,49 @@ footer {
     }
 
     nav ul.active {
-        display: flex; /* Mostramos el menú cuando está activo */
+        display: flex;
     }
 
     nav ul li {
         margin: 10px 0;
         text-align: center;
-
     }
+
     .video-background {
         top: 10.625rem;
-      }
-      .carousel-slide img{
+    }
+
+    .carousel-slide img {
         width: 80%;
         height: 60%;
-      }
-      
-      .slide-text {
+    }
+
+    .slide-text {
         align-items: center;
-      }
-      .carousel{
+    }
+
+    .carousel {
         margin-left: 10%;
-      }
+    }
 }
 
-
-
-
-
-
-
-
-/*media queries*/
 @media (max-width: 928px) {
     .carousel {
         width: 50%;
     }
-
-
 }
-
 
 @media (max-width: 575px) {
     .carousel {
         width: 70%;
     }
+
     .contenedorsection1 {
         width: 70%;
     }
-
-
 }
 
-.contenedorSections{
+.contenedorSections {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -624,28 +576,27 @@ footer {
 /* Contenedor en forma de acordeón horizontal */
 .accordion-horizontal {
     display: flex;
+    align-items: center;
     flex-direction: row;
     justify-content: center;
-    align-items: stretch;
     width: 100%;
     height: 300px;
     gap: 5px;
-  }
-  
-  /* Cada elemento del acordeón (las opciones) */
-  .accordion-item {
+}
+
+/* Cada elemento del acordeón (las opciones) */
+.accordion-item {
     position: relative;
     width: 100px; /* Tamaño inicial */
     height: 100%;
     background: #111;
     transition: width 0.4s ease-in-out;
-    
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Botones */
-  .accordion-button {
+}
+
+/* Botones */
+.accordion-button {
     width: 100%;
     height: 100%;
     background: #fff;
@@ -656,14 +607,14 @@ footer {
     text-orientation: upright;
     cursor: pointer;
     transition: background 0.3s;
-  }
-  
-  .accordion-button:hover {
+}
+
+.accordion-button:hover {
     background: #33333300;
-  }
-  
-  /* Panel oculto dentro de cada acordeón */
-  .accordion-panel {
+}
+
+/* Panel oculto dentro de cada acordeón */
+.accordion-panel {
     position: absolute;
     top: 0;
     left: 100%;
@@ -674,95 +625,165 @@ footer {
     padding: 15px;
     display: none;
     transition: transform 0.4s ease-in-out;
-  }
-  
-  /* Cuando el panel está activo */
-  .accordion-item.active {
+}
+
+.accordion-panel p {
+    background-color: #00000096;
+}
+/* Cuando el panel está activo */
+.accordion-item.active {
     width: 300px; /* Expandir la opción activa */
-  }
-  
-  .accordion-item.active .accordion-panel {
+}
+
+.accordion-item.active .accordion-panel {
     display: block;
     transform: translateX(-100%);
-  }
-  
-
-.section2{
-    background: -webkit-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(55, 16, 185) 50%, rgb(0, 0, 0) 100%);
-    }
-
-
-
-    .item1,.item2,.item3,.item4,.item5{
-        background-image: url('../assets/img/victoria.jpeg');
-        background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
-        background-position: center; /* Centra la imagen dentro del contenedor */
-        padding: 20px; /* Ajusta el espacio dentro del contenedor */
-        border: 1px solid #ccc; /* Agrega borde si lo necesitas */
 }
-.item2{
+
+.section2 {
+    background: -webkit-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(55, 16, 185) 50%, rgb(0, 0, 0) 100%);
+}
+
+.item1, .item2, .item3, .item4, .item5 {
+    background-image: url('../assets/img/victoria.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.item2 {
     background-image: url('../assets/img/eze.jpg');
 }
-.item3{
+
+.item3 {
     background-image: url('../assets/img/gia.jpeg');
 }
+
 .item4 {
     background-image: url('../assets/img/lez.jpg');
 }
+
 .item5 {
     background-image: url('../assets/img/fotoInicio.png');
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 484px) {
-    
     .contenedorsection1 {
         width: 100%;
     }
-
-
 }
 
-
-
 @media (max-width: 469px) {
-    
     .section2 {
         padding-left: 50px;
     }
-
-
 }
 
 @media (max-width: 375px) {
-    
     .section2 {
         padding-left: 80px;
     }
-    .quienes-somos{
+
+    .quienes-somos {
         width: 115%;
-
     }
-
 }
 
 @media (max-width: 365px) {
-    
     .section2 {
         padding-left: 90px;
         text-align: center;
     }
-    .quienes-somos{
+
+    .quienes-somos {
         width: 115%;
-
     }
-
 }
 
 @media (max-width: 360px) {
-    .quienes-somos{
+    .quienes-somos {
         width: 122%;
+    }
+}
+/* Añade estas reglas al final de tu archivo CSS */
 
+/* Estilos para el acordeón en móviles */
+@media (max-width: 768px) {
+    .accordion-button {
+        width: 20%;
+    }
+    .accordion-item.active .accordion-panel {
+        
+        transform: translateX(0%);
+    }
+    
+    .accordion-horizontal {
+        flex-direction: column; /* Cambia a vertical en móviles */
+        height: auto; /* Altura automática */
+        gap: 10px; /* Espacio entre elementos */
     }
 
+    .accordion-item {
+        width: 100%; /* Ocupa todo el ancho */
+        height: 60px; /* Altura fija para los botones */
+    }
+
+    .accordion-button {
+        writing-mode: horizontal-tb; /* Texto horizontal en móviles */
+        text-orientation: unset; /* Restablece la orientación del texto */
+        font-size: 1.2rem; /* Tamaño de fuente más grande */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .accordion-panel {
+        position: static; /* El panel se muestra debajo del botón */
+        width: 100%; /* Ocupa todo el ancho */
+        transform: none; /* Sin transformación */
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.274); /* Fondo oscuro para mejor legibilidad */
+    }
+
+    .accordion-item.active {
+        height: auto; /* Altura automática cuando está activo */
+    }
+
+    .accordion-item.active .accordion-button {
+        display: none; /* Oculta el título cuando el panel está activo */
+    }
 }

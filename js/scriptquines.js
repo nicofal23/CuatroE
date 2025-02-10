@@ -3,7 +3,7 @@ const audio = document.getElementById("audio");
 // Recuperar el estado del audio desde localStorage
 const savedAudioTime = localStorage.getItem("audioTime");
 if (savedAudioTime) {
-    audio.currentTime = parseFloat(savedAudioTime); // Configura el tiempo guardado
+    audio.currentTime = parseFloat(savedAudioTime);
 }
 
 const savedPlayingState = localStorage.getItem("isPlaying");
@@ -14,7 +14,7 @@ if (savedPlayingState === "true") {
 // Guardar el tiempo actual del audio antes de cambiar de página
 window.addEventListener("beforeunload", () => {
     localStorage.setItem("audioTime", audio.currentTime);
-    localStorage.setItem("isPlaying", !audio.paused); // Guardar si está en reproducción
+    localStorage.setItem("isPlaying", !audio.paused);
 });
 
 // Agregar funcionalidad al botón de reproducción
@@ -28,13 +28,7 @@ function toggleMusic() {
     }
 }
 
-
-
-
-
-
 //menu js index 
-// Seleccionamos el botón de hamburguesa, el menú, los enlaces dentro del menú y el botón de música
 const bars = document.querySelector('.bars');
 const navMenu = document.querySelector('nav ul');
 const menuLinks = document.querySelectorAll('nav ul li a');
@@ -42,7 +36,7 @@ const musicButton = document.querySelector('.music-container');
 
 // Alternar la clase 'active' para mostrar u ocultar el menú al hacer clic en el botón
 bars.addEventListener('click', (e) => {
-    e.stopPropagation(); // Evita que el clic se propague al documento
+    e.stopPropagation();
     navMenu.classList.toggle('active');
 });
 
@@ -65,18 +59,28 @@ document.addEventListener('click', (e) => {
     }
 });
 
-
+// Acordeón
+// Acordeón mejorado
 document.querySelectorAll(".accordion-button").forEach((button) => {
     button.addEventListener("click", () => {
-      // Cerrar cualquier panel abierto antes de abrir uno nuevo
-      document.querySelectorAll(".accordion-item").forEach((item) => {
-        if (item !== button.parentElement) {
-          item.classList.remove("active");
+        const parentItem = button.parentElement;
+
+        // Cerrar cualquier panel abierto antes de abrir uno nuevo
+        document.querySelectorAll(".accordion-item").forEach((item) => {
+            if (item !== parentItem && item.classList.contains("active")) {
+                item.classList.remove("active");
+                item.querySelector(".accordion-button").style.display = "flex"; // Muestra el título nuevamente
+            }
+        });
+
+        // Alternar la clase "active" para abrir/cerrar el acordeón
+        parentItem.classList.toggle("active");
+
+        // Ocultar el título cuando el panel está activo
+        if (parentItem.classList.contains("active")) {
+            button.style.display = "none";
+        } else {
+            button.style.display = "flex";
         }
-      });
-  
-      // Alternar la clase "active" para abrir/cerrar el acordeón
-      button.parentElement.classList.toggle("active");
     });
-  });
-  
+});
