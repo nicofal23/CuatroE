@@ -656,13 +656,14 @@ footer {
         display: flex; /* Mostramos el ícono de hamburguesa */
     }
 
+
     nav ul {
         display: none; /* Escondemos el menú principal */
         flex-direction: column;
         position: absolute;
         top: 60px;
         right: 20px;
-        background-color: rgba(3, 3, 3, 0.014);
+        background-color: rgb(3 3 3 / 77%);;
         border: 1px solid #4e4d4d;
         border-radius: 8px;
         width: 200px;
