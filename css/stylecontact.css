@@ -1,0 +1,195 @@
+/* Estilos generales para el formulario */
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con transparencia */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 234, 255, 0.3); /* Sombra con color neon */
+    color: #00EAFF; /* Color del texto */
+}
+
+.container h2 {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #00EAFF; /* Color neon */
+}
+
+/* Estilos para las etiquetas */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #00EAFF; /* Color neon */
+}
+
+/* Estilos para los inputs y textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #00EAFF; /* Borde neon */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    color: #00EAFF; /* Color del texto */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #00EAFF; /* Borde neon al enfocar */
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.5); /* Sombra neon al enfocar */
+    outline: none;
+}
+
+/* Estilos para el botón de enviar */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #00EAFF; /* Fondo neon */
+    color: #000; /* Texto oscuro */
+    border: none;
+    border-radius: 5px;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #00b8c9; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escala */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        margin: 50px auto;
+        padding: 15px;
+    }
+
+    .container h2 {
+        font-size: 2rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    button[type="submit"] {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Estilos para los grupos de entrada con íconos */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 10px;
+    top: 38%;
+    transform: translateY(-50%);
+    color: #00EAFF; /* Color neon */
+    font-size: 1.2rem;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 80%;
+    padding: 10px 10px 10px 40px; /* Espacio para el ícono */
+    border: 2px solid #00EAFF; /* Borde neon */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    color: #00EAFF; /* Color del texto */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group textarea {
+    padding: 10px 10px 10px 40px; /* Espacio para el ícono */
+}
+
+
+/* Estilos para la sección de información de contacto */
+.contact-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #00EAFF; /* Línea divisoria neon */
+}
+
+.contact-info h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8rem;
+    color: #00EAFF; /* Color neon */
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #00EAFF; /* Color neon */
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #00EAFF; /* Color neon */
+}
+
+.contact-info .social-links {
+    margin-top: 15px;
+}
+
+.contact-info .social-links a {
+    color: #00EAFF; /* Color neon */
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.contact-info .social-links a:hover {
+    color: #00b8c9; /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilos para el contenedor del formulario y la imagen */
+.form-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 234, 255, 0.3); /* Sombra neon */
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .form-container {
+        flex-direction: column;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+}

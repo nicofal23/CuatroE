@@ -1,0 +1,92 @@
+
+        body {
+            background-color: #000; /* Fondo oscuro */
+            color: #00EAFF; /* Color neon */
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            
+            height: 100vh;
+        }
+
+        .construction-container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            margin-top:10% ;
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con transparencia */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 234, 255, 0.3); /* Sombra neon */
+        }
+
+        .construction-container h1 {
+            font-family: 'Teko', sans-serif;
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #00EAFF; /* Color neon */
+        }
+
+        .construction-container p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .construction-container .icon {
+            font-size: 4rem;
+            color: #00EAFF; /* Color neon */
+            margin-bottom: 20px;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Animación de pulso para el ícono */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Estilos para el botón de regreso */
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00EAFF; /* Fondo neon */
+            color: #000; /* Texto oscuro */
+            border: none;
+            border-radius: 5px;
+            font-family: 'Teko', sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #00b8c9; /* Color más oscuro al pasar el mouse */
+            transform: scale(1.05); /* Efecto de escala */
+        }
+
+        /* Estilos para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .construction-container h1 {
+                font-size: 2.5rem;
+            }
+
+            .construction-container p {
+                font-size: 1rem;
+            }
+
+            .construction-container .icon {
+                font-size: 3rem;
+            }
+
+            .btn-back {
+                font-size: 1rem;
+            }
+        }

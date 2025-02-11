@@ -6,6 +6,12 @@
     <title>CuatroE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/stylequines.css">
+    <link rel="stylesheet" href="../css/stylecontact.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
 </head>
 <body>
     <header>
@@ -25,8 +31,8 @@
                 <li><a href="../index.html">INICIO</a></li>
                 <li><a href="./quienessomos.html">QUIÉNES SOMOS</a></li>
                 <li><a href="./artista.html">ARTISTAS</a></li>
-                <li><a href="#audiovisual">AUDIOVISUAL Y PRODUCCIÓN</a></li>
-                <li><a href="#produccion">CONTACTO</a></li>
+                <li><a href="./visual.html">AUDIOVISUAL Y PRODUCCIÓN</a></li>
+                <li><a href="./contacto.html">CONTACTO</a></li>
                 <li>
                     <div class="music-container" onclick="toggleMusic()">
                         <div class="circle">
@@ -44,41 +50,85 @@
         </nav>
     </header>
     <main id="main">
-        <div class="container">
-            <h2>Contacto</h2>
-            <form action="mailto:tu_correo@example.com" method="post" enctype="text/plain">
-              <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" required>
-          
-              <label for="email">Correo Electrónico:</label>
-              <input type="email" id="email" name="email" required>
-          
-              <label for="mensaje">Mensaje:</label>
-              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-          
-              <button type="submit">Enviar</button>
-            </form>
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+              <source src="../assets/img/videoinicio.mp4" type="video/mp4">
+              Tu navegador no soporta el video.
+            </video>
           </div>
+          <div class="container">
+            <h2>Contacto</h2>
+            <div class="form-container">
+                <form id="contact-form" action="#" method="post" enctype="text/plain">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="telefono" name="telefono" placeholder="telefono" required>
+                    </div>
+        
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                    </div>
+        
+                    <div class="input-group">
+                        <i class="fas fa-comment"></i>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+                    </div>
+        
+                    <button type="submit" id="send-button">Enviar</button>
+                </form>
+        
+                <div class="image-container">
+                    <img src="../assets/img/contacto.jpeg" alt="Decoración">
+                </div>
+            </div>
+        
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle Falsa 123, Rosario, Argentina</p>
+                <p><i class="fas fa-phone"></i> Teléfono: +54 341 3131016</p>
+                <p><i class="fas fa-envelope"></i> Email: info@cuatroe.com</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/element.producciones?igsh=NHowdGhpbWY1ZTFi" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/3413131016" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer-container">
-          <p>&copy; 2025 CuatroE - Todos los derechos reservados.</p>
-          <div class="social-links">
-            <a href="https://www.instagram.com/element.producciones?igsh=NHowdGhpbWY1ZTFi" target="_blank" class="social-icon instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://wa.me/3413131016" target="_blank" class="social-icon whatsapp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-          </div>
+            <p>&copy; 2025 CuatroE - Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/element.producciones?igsh=NHowdGhpbWY1ZTFi" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/3413131016" target="_blank" class="social-icon whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
         </div>
         <div class="footer-creator">
-          <p>Creado por <a href="https://www.digitalnest.com.ar" target="_blank">Digital Nest</a></p>
+            <p>Creado por <a href="https://www.digitalnest.com.ar" target="_blank">Digital Nest</a></p>
         </div>
-      </footer>
-      
+    </footer>
 
     <audio id="audio" src="../assets/music/victoria.mp3"></audio>
     <script src="../js/script.js"></script>
+    <script src="../js/scriptcontacto.js"></script>
+    <script type="text/javascript">
+        (function() {
+          emailjs.init({
+            publicKey: "cWMIF4Mq1Xo1ZcLc8", // Reemplaza con tu User ID
+          });
+        })();
+      </script>
 </body>
 </html>
