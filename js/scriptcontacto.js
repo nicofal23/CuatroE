@@ -48,3 +48,43 @@
         });
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const bars = document.querySelector('.bars');
+    const navMenu = document.querySelector('nav ul');
+    const menuLinks = document.querySelectorAll('nav ul li a');
+    const musicButton = document.querySelector('.music-container');
+
+    if (!bars || !navMenu) {
+        console.error("No se encontró el botón de hamburguesa o el menú de navegación.");
+        return;
+    }
+
+    // Evento para abrir/cerrar el menú
+    bars.addEventListener('click', function (e) {
+        e.stopPropagation(); // Evita que el evento se propague al documento
+        navMenu.classList.toggle('active');
+    });
+
+    // Cerrar el menú al hacer clic en un enlace
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            navMenu.classList.remove('active');
+        });
+    });
+
+    // Cerrar el menú si se hace clic fuera de él
+    document.addEventListener('click', function (e) {
+        if (!navMenu.contains(e.target) && !bars.contains(e.target)) {
+            navMenu.classList.remove('active');
+        }
+    });
+
+    // Cerrar el menú si se hace clic en el botón de música
+    if (musicButton) {
+        musicButton.addEventListener('click', function () {
+            navMenu.classList.remove('active');
+        });
+    }
+});
