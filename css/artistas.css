@@ -373,3 +373,93 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+/* Estilos para las cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+    border: 2px solid #00EAFF; /* Borde neon */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 234, 255, 0.5); /* Sombra neon */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(0, 234, 255, 0.2), rgba(0, 234, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(50%);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #00EAFF; /* Color neon */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card p {
+    color: #ddd;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 234, 255, 0.8); /* Sombra más intensa al hover */
+}
+
+/* Animación de brillo al pasar el mouse */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 234, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+    }
+}
+
+.card:hover {
+    animation: glow 1.5s infinite alternate;
+}

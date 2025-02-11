@@ -156,6 +156,9 @@ button[type="submit"]:hover {
 }
 
 .contact-info .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 15px;
 }
 
