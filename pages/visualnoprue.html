@@ -6,7 +6,8 @@
     <title>CuatroE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/artistas.css">
+    <link rel="stylesheet" href="../css/stylequines.css">
+    <link rel="stylesheet" href="../css/visual.css">
 </head>
 <body>
     <header>
@@ -23,11 +24,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="../index.html">INICIO</a></li>
-                <li><a href="./quienessomos.html">QUIÉNES SOMOS</a></li>
-                <li><a href="./artista.html">ARTISTAS</a></li>
-                <li><a href="./visual.html">AUDIOVISUAL Y PRODUCCIÓN</a></li>
-                <li><a href="./contacto.html">CONTACTO</a></li>
+              <li><a href="../index.html">INICIO</a></li>
+              <li><a href="./quienessomos.html">QUIÉNES SOMOS</a></li>
+              <li><a href="./artista.html">ARTISTAS</a></li>
+              <li><a href="./visual.html">AUDIOVISUAL Y PRODUCCIÓN</a></li>
+              <li><a href="./contacto.html">CONTACTO</a></li>
                 <li>
                     <div class="music-container" onclick="toggleMusic()">
                         <div class="circle">
@@ -44,28 +45,38 @@
             </ul>
         </nav>
     </header>
- <main>
-  <main>
-    <div class="card-container">
-        <div class="card">
-            <img src="../assets/img/eze.jpg" alt="Eze">
-            <h3>GeroC</h3>
-            <p>DJ y productor especializado en beats futuristas y ritmos envolventes. Su sonido es una experiencia cósmica.</p>
+    <main>
+      <div class="video-background">
+          <video autoplay loop muted playsinline>
+              <source src="../assets/img/videoinicio.mp4" type="video/mp4">
+              Tu navegador no soporta el video.
+          </video>
+      </div>
+  
+      <section class="youtube-videos">
+        <h2 class="scroll-animation">Audiovisual y Producción</h2>
+        <div class="video-grid">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/lDf8ggQVnlg?si=rm2uhYZ0jmk06PEJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <div class="card">
-            <img src="../assets/img/gia.jpeg" alt="Gia">
-            <h3>Gia</h3>
-            <p>Vocalista y compositora con un estilo único que fusiona electrónica y soul. Su voz te transporta a otra dimensión.</p>
+            <div class="video-item scroll-animation">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-item scroll-animation">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-item scroll-animation">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-item scroll-animation">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-item scroll-animation">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
-        <div class="card">
-            <img src="../assets/img/lez2.JPG" alt="Lez">
-            <h3>Lez</h3>
-            <p>Productor audiovisual y artista multimedia. Crea mundos visuales que complementan la música de manera hipnótica.</p>
-        </div>
-    </div>
-</main>
-      
- </main>
+    </section>
+  </main>
     <footer>
         <div class="footer-container">
           <p>&copy; 2025 CuatroE - Todos los derechos reservados.</p>
@@ -86,6 +97,7 @@
 
     <audio id="audio" src="../assets/music/victoria.mp3"></audio>
     <script src="../js/scriptquines.js"></script>
+    <script src="../js/visual.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     

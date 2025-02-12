@@ -84,3 +84,25 @@ document.querySelectorAll(".accordion-button").forEach((button) => {
         }
     });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    const checkVisibility = () => {
+        fadeElements.forEach((element) => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementBottom = element.getBoundingClientRect().bottom;
+
+            // Si el elemento está en la ventana visible
+            if (elementTop < window.innerHeight && elementBottom >= 0) {
+                element.classList.add("visible");
+            }
+        });
+    };
+
+    // Ejecuta la función al cargar la página y al hacer scroll
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility(); // Verifica los elementos visibles al cargar la página
+});

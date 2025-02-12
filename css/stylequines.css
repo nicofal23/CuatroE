@@ -670,7 +670,16 @@ footer p {
 
 
 
+.fade-in {
+    opacity: 0; /* Inicia invisible */
+    transform: translateY(20px); /* Desplaza ligeramente hacia abajo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
+.fade-in.visible {
+    opacity: 1; /* Hace visible el elemento */
+    transform: translateY(0); /* Vuelve a su posición original */
+}
 
 
 
@@ -705,13 +714,13 @@ footer p {
     .contenedorsection1 {
         width: 100%;
     }
-}
-
-@media (max-width: 469px) {
-    .section2 {
-        padding-left: 50px;
+    .social-links{
+        display: flex    ;
+        justify-content: flex-end;
     }
 }
+
+
 
 @media (max-width: 375px) {
     .section2 {
